@@ -1,20 +1,21 @@
+# coding: utf-8
 from PIL import Image
 
 # Everything is calculated in units of 500000 years
 
 epochs = [  (0,    (0,0,0)),        # Big Bang, as seen through cosmic background radiation
             (1400, (201,201,201)),  # Oldest known Gamma Ray Burst
-            (1900, (119,0,150)),    # First galaxies form[4]
+            (1900, (119,0,150)),    # First galaxies form
             (5600, (23,87,120)),    # Milky Way Galaxy formed
             (10000,(73,155,201)),   # Milky Way Galaxy disk formed
             (18460,(100,178,223)),  # formation of the Solar System
             (18800,(100,100,100)),  # Oldest rocks known on Earth
-            (19400,(198,147,0)),    # "Remains of biotic life" found in 4.1 billion-year-old rocks in Western Australia.[5][6]
-            (20000,(255,224,97)),   # First Life (Prokaryotes)[7][8][9]
+            (19400,(198,147,0)),    # "Remains of biotic life" found in 4.1 billion-year-old rocks in Western Australia.
+            (20000,(255,224,97)),   # First Life (Prokaryotes)
             (20800,(87,135,38)),    # Photosynthesis
             (22800,(110,192,56)),   # Oxygenation of Atmosphere
             (23600,(156,225,147)),  # Complex Cells (Eukaryotes)
-            (26000,(250,126,144)),  # First Multicellular Life[10]
+            (26000,(250,126,144)),  # First Multicellular Life
             (26260,(255,169,58)),   # Simple Animals
             (26500,(209,127,21)),   # Arthropods (ancestors of insects, arachnids)
             (26600,(130,207,205)),  # Fish and Proto-amphibians
@@ -27,7 +28,7 @@ epochs = [  (0,    (0,0,0)),        # Big Bang, as seen through cosmic backgroun
             (27200,(210,65,0)),     # Mammals
             (27300,(238,170,22)),   # Birds
             (27340,(184,164,208)),  # Flowers
-            (27470,(153,206,212)),  # Cretaceous–Paleogene extinction event, Non-avian Dinosaurs Die Out[11]
+            (27470,(153,206,212)),  # Cretaceous–Paleogene extinction event, Non-avian Dinosaurs Die Out
             (27471,(240,191,95)),   # Primates
             (27571,(181,190,16)),   # Apes
             (27576,(240,232,0)),    # Hominids
