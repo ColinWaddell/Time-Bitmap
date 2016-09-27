@@ -71,19 +71,15 @@ for e in range(0, (yearsWide * yearsHigh)-1):
             epochs_n = epochs_n + 1
 
     # Show blanks if past last epoch
-    if(e > epochs[-1][0]):
-        color = (255, 255, 255)
+    if(e < epochs[-1][0]):
+        color = epochs[epochs_n][1]
+        # Draw Pixel
+        for i in range(0, pixelWidth):
+            for j in range(0, pixelHeight):
+                pixels[x+i,y+j] = color
     elif(e == epochs[-1][0]):
         color = epochs[epochs_n][1]
-        pixelWidth = 1
-        pixelHeight = 1
-    else:
-        color = epochs[epochs_n][1]
-
-    # Draw Pixel
-    for i in range(0, pixelWidth):
-        for j in range(0, pixelHeight):
-            pixels[x+i,y+j] = color
+        pixels[x,y] = color
 
 # Done!
 img.show()
