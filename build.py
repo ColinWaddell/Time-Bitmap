@@ -72,6 +72,10 @@ for e in range(0, (yearsWide * yearsHigh)-1):
     # Show blanks if past last epoch
     if(e > epochs[-1][0]):
         color = (255, 255, 255)
+    elif(e == epochs[-1][0]):
+        color = epochs[epochs_n][1]
+        pixelWidth = 1
+        pixelHeight = 1
     else:
         color = epochs[epochs_n][1]
 
