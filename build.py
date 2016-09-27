@@ -1,6 +1,6 @@
 from PIL import Image
 
-units = 500000
+# Everything is calculated in units of 500000 years
 
 epochs = [  (0,    (0,0,0)),        # Big Bang, as seen through cosmic background radiation
             (1400, (201,201,201)),  # Oldest known Gamma Ray Burst
@@ -35,29 +35,31 @@ epochs = [  (0,    (0,0,0)),        # Big Bang, as seen through cosmic backgroun
             (27599,(255,38,0)),     # Domestication of Fire
             (27600,(0,173,255))     # Now
           ]
+# Index the epoch array
+epochs_n = 0
 
+# The colour which forms the gaps
 colourSpacer = (255, 255, 255)
 
-year  = 0
+# Number of x/y pixels to draw
 yearsWide = 140
 yearsHigh = 198
 
+# Artwork dimensions
 pixelWidth = 2
 pixelHeight = 2
 spacerWidth = 1
 spacerHeight = 1
 
+# Total image size
 width = (pixelWidth + spacerWidth) * yearsWide
 height = (pixelHeight + spacerHeight) * yearsHigh
 
-epochs_n = 0
-
-img = Image.new( 'RGB', (width,height), colourSpacer) # create a new white image
+# Initialise image
+img = Image.new( 'RGB', (width,height), colourSpacer)
 pixels = img.load() # create the pixel map
 
-print(epochs[0][1])
-print((yearsWide * yearsHigh)-1)
-
+# Loop through each drawable epoch
 for e in range(0, (yearsWide * yearsHigh)-1):
     x = (e % yearsWide) * (pixelWidth + spacerWidth)
     y = int(e / yearsWide)  * (pixelHeight + spacerHeight)
@@ -78,4 +80,5 @@ for e in range(0, (yearsWide * yearsHigh)-1):
         for j in range(0, pixelHeight):
             pixels[x+i,y+j] = color
 
+# Done!
 img.show()
