@@ -57,7 +57,7 @@ width = (pixelWidth + spacerWidth) * yearsWide
 height = (pixelHeight + spacerHeight) * yearsHigh
 
 # Initialise image
-img = Image.new( 'RGB', (width,height), colourSpacer)
+img = Image.new('RGB', (width,height), colourSpacer)
 pixels = img.load() # create the pixel map
 
 # Loop through each drawable epoch
